@@ -24,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
     {
         boolean toret = false;
         switch( menuItem.getItemId() ) {
-            
-
+            case R.id.itemNE:
+                goNE();
+                break;
+            case R.id.itemNR:
+                goNR();
+                break;
         }
         return toret;
     }
