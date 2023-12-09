@@ -2,12 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/itemNE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Nuevo Entreno" />
+        android:title="@string/newEntreno" />
     <item
         android:id="@+id/itemNR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Nueva Rutina" />
+        android:title="@string/newRutina" />
 </menu>
