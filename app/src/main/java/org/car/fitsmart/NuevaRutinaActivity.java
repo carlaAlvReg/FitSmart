@@ -93,7 +93,7 @@ public class NuevaRutinaActivity extends Activity {
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Ejercicio ejercicioSeleccionado = (Ejercicio) parent.getItemAtPosition(position);
-            // Aquí puedes agregar el ejercicio seleccionado a la tabla de rutinas
+
         });
 
     }
