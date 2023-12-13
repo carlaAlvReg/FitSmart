@@ -31,6 +31,30 @@
         android:hint="Grupo Muscular"
         android:inputType="text" />
 
+    <EditText
+        android:id="@+id/txtNumSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Numero de series"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtNumRepes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Numero de repeticiones"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Dia"
+        android:inputType="text" />
+
     <Button
         android:id="@+id/btnGuarda"
         android:layout_width="match_parent"

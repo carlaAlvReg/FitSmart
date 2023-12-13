@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VerActivity">
+
+    <TextView
+        android:id="@+id/tviewNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewNombre"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tviewNivelDificultad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nivel dificultad:" />
+
+    <EditText
+        android:id="@+id/txtNivelDificultad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewNivelDificultad"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tviewGrupoMuscular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grupo Muscular:" />
+
+    <EditText
+        android:id="@+id/txtGrupoMuscular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewGrupoMuscular"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tviewNumSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero de series:" />
+
+    <EditText
+        android:id="@+id/txtNumSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewNumSeries"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tviewNumRepes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero de repeticiones:" />
+
+    <EditText
+        android:id="@+id/txtNumRepes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewNumRepes"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tviewDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dia:" />
+
+    <EditText
+        android:id="@+id/txtDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewDia"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnGuarda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</LinearLayout>

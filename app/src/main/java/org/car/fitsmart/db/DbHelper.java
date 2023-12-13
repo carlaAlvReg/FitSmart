@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NOMBRE = "ejercicios.db";
     public static final String TABLE_EJERCICIOS = "t_ejercicios";
     private static final String TABLE_RUTINA = "t_rutina";
@@ -30,7 +30,10 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nombre TEXT NOT NULL," +
                 "nivel_dificultad TEXT," +
-                "grupo_muscular TEXT NOT NULL)");
+                "grupo_muscular TEXT NOT NULL,"+
+                "num_series TEXT NOT NULL,"+
+                "num_repes TEXT NOT NULL,"+
+                "dia TEXT NOT NULL"+")");
         
         /*sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_RUTINA + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +

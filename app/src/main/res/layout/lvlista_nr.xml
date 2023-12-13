@@ -16,18 +16,59 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/viewND"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="end|center_vertical"
-            android:textSize="16sp"
-            android:textStyle="italic" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/viewGM"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/viewND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical|end"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/viewGM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical|end"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/viewNS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|end" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="x" />
+
+            <TextView
+                android:id="@+id/viewNR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical|end"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/viewDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical|end" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

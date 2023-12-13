@@ -12,7 +12,7 @@ import org.car.fitsmart.db.DbEjercicios;
 
 public class NuevoActivity extends AppCompatActivity {
 
-    EditText txtNombre, txtNivelDificultad, txtGrupoMuscular;
+    EditText txtNombre, txtNivelDificultad, txtGrupoMuscular, txtNumSeries, txtNumRepes, txtDia;
     Button btnGuarda;
 
     @Override
@@ -23,13 +23,16 @@ public class NuevoActivity extends AppCompatActivity {
         txtNombre = findViewById(R.id.txtNombre);
         txtNivelDificultad = findViewById(R.id.txtNivelDificultad);
         txtGrupoMuscular = findViewById(R.id.txtGrupoMuscular);
+        txtNumSeries = findViewById(R.id.txtNumSeries);
+        txtNumRepes = findViewById(R.id.txtNumRepes);
+        txtDia = findViewById(R.id.txtDia);
         btnGuarda = findViewById(R.id.btnGuarda);
 
         btnGuarda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DbEjercicios dbEjercicios = new DbEjercicios(NuevoActivity.this);
-                long id = dbEjercicios.insertaEjercicio(txtNombre.getText().toString(), txtNivelDificultad.getText().toString(), txtGrupoMuscular.getText().toString());
+                long id = dbEjercicios.insertaEjercicio(txtNombre.getText().toString(), txtNivelDificultad.getText().toString(), txtGrupoMuscular.getText().toString(), txtNumSeries.getText().toString(),txtNumRepes.getText().toString(), txtDia.getText().toString());
                 System.out.println("El id es"+id);
                 if(id > 0){
                     Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
@@ -46,6 +49,10 @@ public class NuevoActivity extends AppCompatActivity {
         txtNombre.setText("");
         txtNivelDificultad.setText("");
         txtGrupoMuscular.setText("");
+        txtNumSeries.setText("");
+        txtNumRepes.setText("");
+        txtDia.setText("");
+
 
     }
 }

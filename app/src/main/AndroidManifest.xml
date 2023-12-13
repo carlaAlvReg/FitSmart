@@ -21,16 +21,52 @@
         android:theme="@style/Theme.FitSmart"
         tools:targetApi="31">
         <activity
-            android:name=".NuevoActivity"
+            android:name=".VerActivity"
             android:exported="false"
-            android:theme="@style/Theme.FitSmart"
-            android:parentActivityName=".NuevaRutinaActivity">
+            android:parentActivityName=".NuevaRutinaActivity"
+            android:theme="@style/Theme.FitSmart">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".NuevaRutinaActivity" />
+        </activity>
+        <activity
+            android:name=".EditarActivity"
+            android:exported="false"
+            android:parentActivityName=".NuevaRutinaActivity"
+            android:theme="@style/Theme.FitSmart">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NuevaRutinaActivity"/>
+                android:value=".NuevaRutinaActivity" />
         </activity>
-
-
+        <activity
+            android:name=".NuevoActivity"
+            android:exported="false"
+            android:parentActivityName=".NuevaRutinaActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NuevaRutinaActivity" />
+        </activity>
+        <activity
+            android:name=".NuevaRutinaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_nueva_rutina"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".NuevoEntrenoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_nuevo_entreno"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -39,26 +75,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".NuevaRutinaActivity"
-            android:exported="false"
-            android:label="@string/title_activity_nueva_rutina"
-            android:theme="@style/Theme.FitSmart"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity"/>
-        </activity>
-        <activity
-            android:name=".NuevoEntrenoActivity"
-            android:exported="false"
-            android:label="@string/title_activity_nuevo_entreno"
-            android:theme="@style/Theme.FitSmart"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
         </activity>
     </application>
 
