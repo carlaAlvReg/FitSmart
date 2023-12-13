@@ -36,11 +36,6 @@
                         android:textSize="30sp"
                         tools:ignore="NestedWeights" />
 
-                    <Button
-                        android:id="@+id/btnCrear"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="CrearBase" />
                 </LinearLayout>
 
                 <LinearLayout

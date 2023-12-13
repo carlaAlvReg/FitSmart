@@ -23,7 +23,14 @@
         <activity
             android:name=".NuevoActivity"
             android:exported="false"
-            android:theme="@style/Theme.FitSmart" />
+            android:theme="@style/Theme.FitSmart"
+            android:parentActivityName=".NuevaRutinaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NuevaRutinaActivity"/>
+        </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -37,12 +44,22 @@
             android:name=".NuevaRutinaActivity"
             android:exported="false"
             android:label="@string/title_activity_nueva_rutina"
-            android:theme="@style/Theme.FitSmart" />
+            android:theme="@style/Theme.FitSmart"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".NuevoEntrenoActivity"
             android:exported="false"
             android:label="@string/title_activity_nuevo_entreno"
-            android:theme="@style/Theme.FitSmart" />
+            android:theme="@style/Theme.FitSmart"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
     </application>
 
 </manifest>

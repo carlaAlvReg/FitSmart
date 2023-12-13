@@ -19,10 +19,9 @@ public class DbEjercicios extends DbHelper{
 
     public long insertaEjercicio(String nombre, String nivel_dificultad, String grupo_muscular){
         long id = 0;
-        SQLiteDatabase db = null;
         try {
             DbHelper dbHelper = new DbHelper(context);
-            db = dbHelper.getWritableDatabase();
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
             values.put("nombre", nombre);
@@ -31,11 +30,7 @@ public class DbEjercicios extends DbHelper{
 
             id = db.insert(TABLE_EJERCICIOS, null, values);
         }catch (Exception ex) {
-            ex.printStackTrace();
-        }finally {
-            if(db != null && db.isOpen()){
-                db.close();
-            }
+            ex.toString();
         }
         return id;
     }

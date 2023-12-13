@@ -10,8 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.car.fitsmart.adaptadores.ListaEjerciciosAdapter;
+import org.car.fitsmart.db.DbEjercicios;
 import org.car.fitsmart.db.DbHelper;
 import org.car.fitsmart.db.Ejercicio;
 
@@ -19,9 +22,8 @@ import java.util.ArrayList;
 
 public class NuevaRutinaActivity extends Activity {
 
-    Button btnCrear;
     Button btnRegistro;
-   /* DbHelper dbHelper = new DbHelper(this);*/
+    DbHelper dbHelper = new DbHelper(this);
     RecyclerView listaEjercicios;
     ArrayList<Ejercicio> listaArrayEjercicios;
 
@@ -29,21 +31,8 @@ public class NuevaRutinaActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nueva_rutina);
-        btnCrear = findViewById(R.id.btnCrear);
         btnRegistro = findViewById(R.id.btnRegistro);
 
-        btnCrear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DbHelper dbHelper = new DbHelper(NuevaRutinaActivity.this);
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                if(db != null){
-                    Toast.makeText(NuevaRutinaActivity.this, "BASE DE DATOS CREADA", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(NuevaRutinaActivity.this, "ERROR AL CREAR BASE DE DATOS", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +41,7 @@ public class NuevaRutinaActivity extends Activity {
             }
         });
 
-        /*listaEjercicios = findViewById(R.id.listaEjercicios);
+        listaEjercicios = findViewById(R.id.listaEjercicios);
         listaEjercicios.setLayoutManager(new LinearLayoutManager(this));
 
         DbEjercicios dbEjercicios = new DbEjercicios(NuevaRutinaActivity.this);
@@ -60,7 +49,7 @@ public class NuevaRutinaActivity extends Activity {
         listaArrayEjercicios = new ArrayList<>();
 
         ListaEjerciciosAdapter adapter = new ListaEjerciciosAdapter(dbEjercicios.mostrarEjercicios());
-        listaEjercicios.setAdapter(adapter);*/
+        listaEjercicios.setAdapter(adapter);
 
 
        /* ImageButton btInserta = findViewById(R.id.bNuevaRutina);

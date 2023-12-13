@@ -7,6 +7,6 @@
     <string name="newEntreno">Nuevo Entrenamiento</string>
     <string name="newRutina">Nueva Rutina</string>
     <string name="description_nueva_rutina">Crear nueva rutina de ejercicios</string>
-    <string name="mis_rutinas">Crear nueva rutina de ejercicios</string>
+    <string name="mis_rutinas">Rutina de ejercicios</string>
 
 </resources>

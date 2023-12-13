@@ -30,7 +30,7 @@ public class NuevoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DbEjercicios dbEjercicios = new DbEjercicios(NuevoActivity.this);
                 long id = dbEjercicios.insertaEjercicio(txtNombre.getText().toString(), txtNivelDificultad.getText().toString(), txtGrupoMuscular.getText().toString());
-
+                System.out.println("El id es"+id);
                 if(id > 0){
                     Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
                     limpiar();
