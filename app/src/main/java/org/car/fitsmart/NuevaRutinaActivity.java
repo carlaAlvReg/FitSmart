@@ -2,33 +2,68 @@ package org.car.fitsmart;
 
 import android.app.Activity;
 
-import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ListView;
+import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.car.fitsmart.db.DbHelper;
 import org.car.fitsmart.db.Ejercicio;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class NuevaRutinaActivity extends Activity {
 
-
-    DbHelper dbHelper = new DbHelper(this);
+    Button btnCrear;
+    Button btnRegistro;
+   /* DbHelper dbHelper = new DbHelper(this);*/
+    RecyclerView listaEjercicios;
+    ArrayList<Ejercicio> listaArrayEjercicios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nueva_rutina);
+        btnCrear = findViewById(R.id.btnCrear);
+        btnRegistro = findViewById(R.id.btnRegistro);
+
+        btnCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DbHelper dbHelper = new DbHelper(NuevaRutinaActivity.this);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                if(db != null){
+                    Toast.makeText(NuevaRutinaActivity.this, "BASE DE DATOS CREADA", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(NuevaRutinaActivity.this, "ERROR AL CREAR BASE DE DATOS", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btnRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nuevoRegistro();
+            }
+        });
+
+        /*listaEjercicios = findViewById(R.id.listaEjercicios);
+        listaEjercicios.setLayoutManager(new LinearLayoutManager(this));
+
+        DbEjercicios dbEjercicios = new DbEjercicios(NuevaRutinaActivity.this);
+
+        listaArrayEjercicios = new ArrayList<>();
+
+        ListaEjerciciosAdapter adapter = new ListaEjerciciosAdapter(dbEjercicios.mostrarEjercicios());
+        listaEjercicios.setAdapter(adapter);*/
 
 
-        ImageButton btInserta = findViewById(R.id.bNuevaRutina);
+       /* ImageButton btInserta = findViewById(R.id.bNuevaRutina);
         btInserta.setOnClickListener(view -> {
 
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -94,16 +129,38 @@ public class NuevaRutinaActivity extends Activity {
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Ejercicio ejercicioSeleccionado = (Ejercicio) parent.getItemAtPosition(position);
 
-        });
+        });*/
 
     }
 
+    /*public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_nueva_rutina, menu);
+        return true;
+    }
 
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.menuNuevo) {
+            nuevoRegistro();
+            return true;
+        }else{
+            return super.onOptionsItemSelected(item);
+        }
+    }*/
+    
+    private void nuevoRegistro(){
+        Intent intent = new Intent(this, NuevoActivity.class);
+        startActivity(intent);
+    }
+
+   /* public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Ejercicio ejercicioSeleccionado = (Ejercicio) parent.getItemAtPosition(position);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         dbHelper.insertRutina(db,ejercicioSeleccionado.getId(), 3, 8, "Rutina 1");
-    }
+    }*/
 
 
 

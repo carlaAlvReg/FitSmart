@@ -5,28 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".EditorActivity">
+    tools:context=".NuevoActivity">
 
     <EditText
-        android:id="@+id/etNombre"
+        android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre"
+        android:ems="10"
+        android:hint="Nombre:"
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/etDescripcion"
+        android:id="@+id/txtNivelDificultad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripción"
-        android:inputType="textMultiLine" />
+        android:ems="10"
+        android:hint="Nivel Dificultad"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtGrupoMuscular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Grupo Muscular"
+        android:inputType="text" />
 
     <Button
-        android:id="@+id/btGuarda"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnGuarda"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:text="Guardar" />
-
 </LinearLayout>

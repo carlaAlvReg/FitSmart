@@ -4,6 +4,7 @@ public class Ejercicio {
 
     private int id;
     private String nombre;
+
     private String nivel_dificultad;
     private String grupo_muscular;
     public Ejercicio(){
@@ -21,8 +22,16 @@ public class Ejercicio {
         this.nivel_dificultad = nivelDificultad;
     }
 
-    public void setGrupo_mucular(String grupoMucular) {
-        this.grupo_muscular = grupoMucular;
+    public void setGrupo_muscular(String grupoMuscular) {
+        this.grupo_muscular = grupoMuscular;
+    }
+
+    public String getNivel_dificultad() {
+        return nivel_dificultad;
+    }
+
+    public String getGrupo_muscular() {
+        return grupo_muscular;
     }
 
     public int getId() {

@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 /** Maneja el acceso a la base de datos. */
 public class DBManager {
     private static DBManager instance;
@@ -21,6 +23,7 @@ public class DBManager {
         }
         return instance;
     }
+
 
 
 }

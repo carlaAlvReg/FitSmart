@@ -35,6 +35,12 @@
                         android:text="@string/mis_rutinas"
                         android:textSize="30sp"
                         tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/btnCrear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="CrearBase" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -43,10 +49,12 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <ListView
-                        android:id="@+id/lvListaNR"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listaEjercicios"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent" >
+
+                    </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
             </LinearLayout>
 
@@ -59,21 +67,19 @@
             android:baselineAligned="false"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <ImageButton
+                android:id="@+id/bNuevaRutina"
+                android:layout_width="121dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:orientation="vertical"
-                tools:ignore="NestedWeights">
+                android:background="@drawable/pesa"
+                android:contentDescription="@string/description_nueva_rutina" />
 
-                <ImageButton
-                    android:id="@+id/bNuevaRutina"
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/pesa"
-                    android:contentDescription="@string/description_nueva_rutina" />
+            <Button
+                android:id="@+id/btnRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nuevo Registro" />
 
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

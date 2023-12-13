@@ -16,7 +16,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NOMBRE = "ejercicios.db";
-    private static final String TABLE_EJERCICIOS = "t_ejercicios";
+    public static final String TABLE_EJERCICIOS = "t_ejercicios";
     private static final String TABLE_RUTINA = "t_rutina";
     private static final String TABLE_ENTRENAMIENTO = "t_entrenamiento";
 
@@ -30,9 +30,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nombre TEXT NOT NULL," +
                 "nivel_dificultad TEXT," +
-                "grupo_mucular TEXT NOT NULL" + ")");
+                "grupo_mucular TEXT NOT NULL)");
         
-        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_RUTINA + "(" +
+        /*sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_RUTINA + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "id_ejercicio INTEGER NOT NULL," +
                 "num_series INTEGER NOT NULL," +
@@ -43,9 +43,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id_entrenamiento INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "id_rutina INTEGER NOT NULL," +
                 "nombre TEXT," +
-                "FOREIGN KEY (id_rutina) REFERENCES TABLE_RUTINA(id)"+")");
+                "FOREIGN KEY (id_rutina) REFERENCES TABLE_RUTINA(id)"+")");*/
 
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_EJERCICIOS + " (nombre, nivel_dificultad, grupo_muscular) VALUES " +
+       /* sqLiteDatabase.execSQL("INSERT INTO " + TABLE_EJERCICIOS + " (nombre, nivel_dificultad, grupo_muscular) VALUES " +
                 "('Press de Banca' , 'Intermedio', 'Pecho')," +
                 "('Sentadilla', 'Avanzado', 'Piernas'),"+
                 "('Peso Muerto', 'Avanzado', 'Espalda y Piernas'),"+
@@ -121,10 +121,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 "('Seated Leg Press', 'Principiante', 'Piernas'),"+
                 "('Bent Over Row', 'Intermedio', 'Espalda'),"+
                 "('Tricep Dips', 'Principiante', 'Tríceps')," +
-                "('Leg Extension', 'Principiante', 'Cuádriceps')");
+                "('Leg Extension', 'Principiante', 'Cuádriceps')");*/
+
     }
 
-    @SuppressLint("Range")
+    /*@SuppressLint("Range")
     public List<Ejercicio> getAllEjercicios() {
         List<Ejercicio> ejercicios = new ArrayList<>();
         String selectQuery = "SELECT * FROM t_ejercicios";
@@ -148,22 +149,24 @@ public class DbHelper extends SQLiteOpenHelper {
         db.close();
 
         return ejercicios;
-    }
+    }*/
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_EJERCICIOS);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_ENTRENAMIENTO);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_RUTINA);
+        /*sqLiteDatabase.execSQL("DROP TABLE " + TABLE_ENTRENAMIENTO);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_RUTINA);*/
         onCreate(sqLiteDatabase);
     }
 
-    public void insertRutina(SQLiteDatabase sqLiteDatabase ,int id_ejercicio, int num_series, int num_reps, String nombre) {
+    /*public void insertRutina(SQLiteDatabase sqLiteDatabase ,int id_ejercicio, int num_series, int num_reps, String nombre) {
         ContentValues values = new ContentValues();
         values.put("id_ejercicio", id_ejercicio);
         values.put("num_series", num_series);
         values.put("num_reps", num_reps);
         values.put("nombre", nombre);
         sqLiteDatabase.insert("t_rutina", null, values);
-    }
+    }*/
 }
