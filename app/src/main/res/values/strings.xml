@@ -4,8 +4,8 @@
     <string name="title_activity_nueva_rutina">NuevaRutinaActivity</string>
     <string name="title_activity_nuevo_entreno">NuevoEntrenoActivity</string>
     <string name="title_activity_main5">MainActivity5</string>
-    <string name="newEntreno">Nuevo Entrenamiento</string>
-    <string name="newRutina">Nueva Rutina</string>
+    <string name="newEntreno">Entrenamiento</string>
+    <string name="newRutina">Rutina</string>
     <string name="description_nueva_rutina">Crear nueva rutina de ejercicios</string>
     <string name="mis_rutinas">Rutina de ejercicios</string>
     <string name="hint_nombre">Nombre:</string>
