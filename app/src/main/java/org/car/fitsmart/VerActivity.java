@@ -103,7 +103,7 @@ public class VerActivity extends AppCompatActivity {
     }
 
    private void lista(){
-        Intent intent = new Intent(this, NuevaRutinaActivity.class);
+        Intent intent = new Intent(this, RutinaActivity.class);
         startActivity(intent);
     }
 

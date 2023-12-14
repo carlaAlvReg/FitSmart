@@ -11,7 +11,7 @@
         android:id="@+id/tviewNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre:" />
+        android:text="@string/hint_nombre" />
 
     <EditText
         android:id="@+id/txtNombre"
@@ -20,11 +20,12 @@
         android:ems="10"
         android:labelFor="@+id/tviewNombre"
         android:inputType="text" />
+
     <TextView
         android:id="@+id/tviewNivelDificultad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nivel dificultad:" />
+        android:text="@string/hint_nivelDificultad" />
 
     <EditText
         android:id="@+id/txtNivelDificultad"
@@ -33,11 +34,12 @@
         android:ems="10"
         android:labelFor="@+id/tviewNivelDificultad"
         android:inputType="text" />
+
     <TextView
         android:id="@+id/tviewGrupoMuscular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Grupo Muscular:" />
+        android:text="@string/hint_grupoMuscular" />
 
     <EditText
         android:id="@+id/txtGrupoMuscular"
@@ -46,11 +48,12 @@
         android:ems="10"
         android:labelFor="@+id/tviewGrupoMuscular"
         android:inputType="text" />
+
     <TextView
         android:id="@+id/tviewNumSeries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Numero de series:" />
+        android:text="@string/hint_numSeries" />
 
     <EditText
         android:id="@+id/txtNumSeries"
@@ -59,11 +62,12 @@
         android:ems="10"
         android:labelFor="@+id/tviewNumSeries"
         android:inputType="text" />
+
     <TextView
         android:id="@+id/tviewNumRepes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Numero de repeticiones:" />
+        android:text="@string/hint_numRepes" />
 
     <EditText
         android:id="@+id/txtNumRepes"
@@ -72,11 +76,12 @@
         android:ems="10"
         android:labelFor="@+id/tviewNumRepes"
         android:inputType="text" />
+
     <TextView
         android:id="@+id/tviewDia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dia:" />
+        android:text="@string/hint_dia" />
 
     <EditText
         android:id="@+id/txtDia"
@@ -90,7 +95,7 @@
         android:id="@+id/btnGuarda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar" />
+        android:text="@string/btn_guardar" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabEdit"

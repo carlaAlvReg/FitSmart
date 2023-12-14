@@ -8,5 +8,22 @@
     <string name="newRutina">Nueva Rutina</string>
     <string name="description_nueva_rutina">Crear nueva rutina de ejercicios</string>
     <string name="mis_rutinas">Rutina de ejercicios</string>
+    <string name="hint_nombre">Nombre:</string>
+    <string name="hint_nivelDificultad">Nivel Dificultad:</string>
+    <string name="hint_grupoMuscular">Grupo Muscular:</string>
+    <string name="hint_numSeries">Numero de Series:</string>
+    <string name="hint_numRepes">Numero de Repeticiones:</string>
+    <string name="hint_dia">Dia:</string>
+    <string name="btn_guardar">Guardar</string>
+    <string-array name="days_array">
+        <item>Domingo</item>
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+    </string-array>
+
 
 </resources>

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nombre:"
+        android:hint="@string/hint_nombre"
         android:inputType="text" />
 
     <EditText
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nivel Dificultad"
+        android:hint="@string/hint_nivelDificultad"
         android:inputType="text" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Grupo Muscular"
+        android:hint="@string/hint_grupoMuscular"
         android:inputType="text" />
 
     <EditText
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Numero de series"
+        android:hint="@string/hint_numSeries"
         android:inputType="text" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Numero de repeticiones"
+        android:hint="@string/hint_numRepes"
         android:inputType="text" />
 
     <EditText
@@ -52,12 +52,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Dia"
+        android:hint="@string/hint_dia"
         android:inputType="text" />
 
     <Button
         android:id="@+id/btnGuarda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar" />
+        android:text="@string/btn_guardar" />
 </LinearLayout>

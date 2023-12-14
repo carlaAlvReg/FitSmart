@@ -51,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void goNR() {
         // Crear un Intent para iniciar la nueva actividad
-        Intent intent = new Intent(this, NuevaRutinaActivity.class);
+        Intent intent = new Intent(this, RutinaActivity.class);
         startActivity(intent);
     }
     private void goNE() {
         // Crear un Intent para iniciar la nueva actividad
-        Intent intent = new Intent(this, NuevoEntrenoActivity.class);
+        Intent intent = new Intent(this, EntrenoActivity.class);
         startActivity(intent);
     }
 
