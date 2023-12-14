@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ver_persona_activity">
+
+    <TextView
+        android:id="@+id/tviewNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_nombre" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewNombre"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tviewAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_Altura" />
+
+    <EditText
+        android:id="@+id/txtAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewAltura"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tviewPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_Peso" />
+
+    <EditText
+        android:id="@+id/txtPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewPeso"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tviewSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_Sexo" />
+
+    <EditText
+        android:id="@+id/txtSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewSexo"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tviewPesoDeseado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_pesoDeseado" />
+
+    <EditText
+        android:id="@+id/txtPesoDeseado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewPesoDeseado"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tviewEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_edad" />
+
+    <EditText
+        android:id="@+id/txtEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@+id/tviewEdad"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnGuarda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_guardar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</LinearLayout>

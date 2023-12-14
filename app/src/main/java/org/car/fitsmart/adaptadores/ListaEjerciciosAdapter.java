@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.car.fitsmart.R;
 import org.car.fitsmart.VerActivity;
 import org.car.fitsmart.db.Ejercicio;
+import org.car.fitsmart.db.Persona;
 
 import java.util.ArrayList;
 
@@ -20,9 +21,13 @@ public class ListaEjerciciosAdapter extends RecyclerView.Adapter<ListaEjercicios
 
     ArrayList<Ejercicio> listaEjercicio;
 
+
+
     public ListaEjerciciosAdapter(ArrayList<Ejercicio> listaEjercicio){
         this.listaEjercicio = listaEjercicio;
     }
+
+
     @NonNull
     @Override
     public EjercicioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -70,4 +75,8 @@ public class ListaEjerciciosAdapter extends RecyclerView.Adapter<ListaEjercicios
 
         }
     }
+
+
+
+
 }
