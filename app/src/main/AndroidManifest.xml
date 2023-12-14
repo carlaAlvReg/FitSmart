@@ -21,6 +21,24 @@
         android:theme="@style/Theme.FitSmart"
         tools:targetApi="31">
         <activity
+            android:name=".nuevaPersona"
+            android:exported="false"
+            android:parentActivityName=".RutinaActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonasActivity" />
+        </activity>
+        <activity
+            android:name=".PersonasActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".RutinaActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
@@ -48,6 +66,24 @@
                 android:value=".RutinaActivity" />
         </activity>
         <activity
+            android:name=".ver_persona_activity"
+            android:exported="false"
+            android:parentActivityName=".PersonasActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonasActivity" />
+        </activity>
+        <activity
+            android:name=".EditarActivityPersona"
+            android:exported="false"
+            android:parentActivityName=".PersonasActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonasActivity" />
+        </activity>
+        <activity
             android:name=".EditarActivity"
             android:exported="false"
             android:parentActivityName=".RutinaActivity"
@@ -65,7 +101,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RutinaActivity" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

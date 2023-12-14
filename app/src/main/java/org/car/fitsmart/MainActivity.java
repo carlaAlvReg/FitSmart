@@ -7,12 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.view.View;
+import android.widget.Button;
 
 import org.car.fitsmart.db.DbHelper;
 
@@ -20,10 +16,20 @@ public class MainActivity extends AppCompatActivity {
     Button btnCrear;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*btnCrear = findViewById(R.id.btnCrear);
+        btnCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DbHelper dbHelper = new DbHelper(MainActivity.this);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+            }
+        });*/
 
     }
     @Override
@@ -44,11 +50,18 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.itemNE) {
             this.goNE();
             toret=true;
+        }else if(itemId == R.id.itemNP){
+            this.goNP();
+            toret=true;
         }
 
         return toret;
     }
 
+    private void goNP(){
+        Intent intent = new Intent(this, PersonasActivity.class);
+        startActivity(intent);
+    }
     private void goNR() {
         // Crear un Intent para iniciar la nueva actividad
         Intent intent = new Intent(this, RutinaActivity.class);

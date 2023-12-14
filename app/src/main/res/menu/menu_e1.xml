@@ -6,4 +6,7 @@
     <item
         android:id="@+id/itemNR"
         android:title="@string/newRutina" />
+    <item
+        android:id="@+id/itemNP"
+        android:title="Personas"/>
 </menu>
