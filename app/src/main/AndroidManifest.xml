@@ -21,9 +21,6 @@
         android:theme="@style/Theme.FitSmart"
         tools:targetApi="31">
         <activity
-            android:name=".lvlista_np"
-            android:exported="false" />
-        <activity
             android:name=".nuevaPersona"
             android:exported="false"
             android:parentActivityName=".RutinaActivity"
@@ -67,6 +64,24 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RutinaActivity" />
+        </activity>
+        <activity
+            android:name=".ver_persona_activity"
+            android:exported="false"
+            android:parentActivityName=".PersonasActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonasActivity" />
+        </activity>
+        <activity
+            android:name=".EditarActivityPersona"
+            android:exported="false"
+            android:parentActivityName=".PersonasActivity"
+            android:theme="@style/Theme.FitSmart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PersonasActivity" />
         </activity>
         <activity
             android:name=".EditarActivity"

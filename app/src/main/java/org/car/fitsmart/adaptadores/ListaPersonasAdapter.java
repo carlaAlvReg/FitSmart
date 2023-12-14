@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.car.fitsmart.R;
-import org.car.fitsmart.VerActivity;
 import org.car.fitsmart.db.Persona;
+import org.car.fitsmart.ver_persona_activity;
 
 import java.util.ArrayList;
 
@@ -65,7 +65,7 @@ public class ListaPersonasAdapter extends RecyclerView.Adapter<ListaPersonasAdap
                 @Override
                 public void onClick(View view) {
                     Context context = view.getContext();
-                    Intent intent = new Intent(context, VerActivity.class);
+                    Intent intent = new Intent(context, ver_persona_activity.class);
                     intent.putExtra("ID", listaPersona.get(getAdapterPosition()).getId());
                     context.startActivity(intent);
                 }
