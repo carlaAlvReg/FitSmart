@@ -22,13 +22,13 @@
     <string name="hint_edad">Edad:</string>
     <string name="btn_guardar_persona">Guardar</string>
     <string-array name="days_array">
-        <item>Domingo</item>
         <item>Lunes</item>
         <item>Martes</item>
-        <item>Miércoles</item>
+        <item>Miercoles</item>
         <item>Jueves</item>
         <item>Viernes</item>
         <item>Sábado</item>
+        <item>Domingo</item>
     </string-array>
 
 

@@ -125,5 +125,43 @@ public class DbEjercicios extends DbHelper{
         }
         return correcto;
     }
+    public ArrayList<Ejercicio> mostrarEjerciciosPorDia(String dia) {
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        ArrayList<Ejercicio> listaEjercicios = new ArrayList<>();
+        Ejercicio ejercicio = null;
+        Cursor cursorEjercicios = null;
+
+        // Utiliza parámetros de selección segura
+        String selection = "dia = ?";
+        String[] selectionArgs = {dia};
+
+        cursorEjercicios = db.query(TABLE_EJERCICIOS, null, selection, selectionArgs, null, null, null);
+
+        if (cursorEjercicios != null && cursorEjercicios.moveToFirst()) {
+            do {
+                ejercicio = new Ejercicio();
+                ejercicio.setId(cursorEjercicios.getInt(0));
+                ejercicio.setNombre(cursorEjercicios.getString(1));
+                ejercicio.setNivel_dificultad(cursorEjercicios.getString(2));
+                ejercicio.setGrupo_muscular(cursorEjercicios.getString(3));
+                ejercicio.setNum_series(cursorEjercicios.getString(4));
+                ejercicio.setNum_repes(cursorEjercicios.getString(5));
+                ejercicio.setDia(cursorEjercicios.getString(6));
+                listaEjercicios.add(ejercicio);
+            } while (cursorEjercicios.moveToNext());
+        }
+
+        // Cierra el cursor y la conexión a la base de datos cuando hayas terminado
+        if (cursorEjercicios != null) {
+            cursorEjercicios.close();
+        }
+        db.close();
+
+        return listaEjercicios;
+    }
+
+
 
 }
