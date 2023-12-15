@@ -10,6 +10,7 @@
     <string name="mis_rutinas">Rutina de ejercicios</string>
     <string name="hint_nombre">Nombre:</string>
     <string name="hint_nivelDificultad">Nivel Dificultad:</string>
+    <string name="s_nivelDificultad">Selecciona Nivel Dificultad:</string>
     <string name="hint_grupoMuscular">Grupo Muscular:</string>
     <string name="hint_numSeries">Numero de Series:</string>
     <string name="hint_numRepes">Numero de Repeticiones:</string>
