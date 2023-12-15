@@ -8,5 +8,5 @@
         android:title="@string/newRutina" />
     <item
         android:id="@+id/itemNP"
-        android:title="Personas"/>
+        android:title="@string/newUsuario"/>
 </menu>
