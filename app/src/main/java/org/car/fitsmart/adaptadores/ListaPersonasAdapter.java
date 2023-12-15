@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,31 +21,26 @@ public class ListaPersonasAdapter extends RecyclerView.Adapter<ListaPersonasAdap
 
 
 
-
-
     public ListaPersonasAdapter(ArrayList<Persona> listaPersona){
         this.listaPersona = listaPersona;
-
     }
 
 
     @NonNull
     @Override
     public PersonaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lvlista_np, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lvlista_np, null, false);
         return new PersonaViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListaPersonasAdapter.PersonaViewHolder holder, int position) {
-
         holder.viewNombre.setText(listaPersona.get(position).getNombre());
         holder.viewAltura.setText(listaPersona.get(position).getAltura());
         holder.viewPeso.setText(listaPersona.get(position).getPeso());
         holder.viewSexo.setText(listaPersona.get(position).getSexo());
         holder.viewPD.setText(listaPersona.get(position).getPesoDeseado());
         holder.viewEdad.setText(listaPersona.get(position).getEdad());
-
     }
 
     @Override
@@ -58,7 +51,6 @@ public class ListaPersonasAdapter extends RecyclerView.Adapter<ListaPersonasAdap
     public class PersonaViewHolder extends RecyclerView.ViewHolder {
 
         TextView viewNombre, viewAltura, viewPeso, viewSexo, viewPD, viewEdad;
-        Switch switchSeleccionar;
         public PersonaViewHolder(@NonNull View itemView) {
             super(itemView);
 
