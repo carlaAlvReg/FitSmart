@@ -112,7 +112,7 @@ public class NuevoActivity extends AppCompatActivity {
 
     // Método mostrarModal
     // Método mostrarModal
-    private void mostrarModalNivelDificultad() {
+    public void mostrarModalNivelDificultad() {
         radioGroupNivelDificultad = new RadioGroup(this);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Selecciona una opción");
@@ -213,7 +213,7 @@ public class NuevoActivity extends AppCompatActivity {
         builder.setTitle("Selecciona una opción");
 
         // Crear un RadioGroup y agregar opciones
-        final String[] opciones = {"Pierna", "Hombro", "Espalda", "Pecho", "Biceps", "Triceps", "Gluteo"};
+        final String[] opciones = {"Pierna", "Hombro", "Espalda", "Pecho", "Bíceps", "Tríceps", "Glúteo"};
 
         // Limpiar selecciones previas
         radioGroupGrupoMuscular.clearCheck();
