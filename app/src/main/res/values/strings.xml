@@ -14,7 +14,7 @@
     <string name="hint_numSeries">Numero de Series:</string>
     <string name="hint_numRepes">Numero de Repeticiones:</string>
     <string name="hint_dia">Dia:</string>
-    <string name="btn_guardar">Guardar</string>
+    <string name="btn_guardar">Guardar:</string>
     <string name="hint_Altura"> Altura: </string>
     <string name="hint_Peso">Peso:</string>
     <string name="hint_Sexo">Sexo:</string>
