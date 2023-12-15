@@ -12,9 +12,11 @@
     <string name="hint_nivelDificultad">Nivel Dificultad:</string>
     <string name="s_nivelDificultad">Selecciona Nivel Dificultad:</string>
     <string name="hint_grupoMuscular">Grupo Muscular:</string>
+    <string name="s_grupoMuscular">Selecciona Grupo Muscular:</string>
     <string name="hint_numSeries">Numero de Series:</string>
     <string name="hint_numRepes">Numero de Repeticiones:</string>
     <string name="hint_dia">Dia:</string>
+    <string name="s_dia">Selecciona Dia:</string>
     <string name="btn_guardar">Guardar:</string>
     <string name="hint_Altura"> Altura: </string>
     <string name="hint_Peso">Peso:</string>
@@ -28,7 +30,7 @@
         <item>Miercoles</item>
         <item>Jueves</item>
         <item>Viernes</item>
-        <item>Sábado</item>
+        <item>Sabado</item>
         <item>Domingo</item>
     </string-array>
 
