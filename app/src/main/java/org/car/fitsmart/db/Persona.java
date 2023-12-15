@@ -1,13 +1,14 @@
 package org.car.fitsmart.db;
 
 public class Persona {
-    String nombre;
-    String peso;
-    String altura;
-    String sexo;
-    String edad;
-    String pesoDeseado;
-    int Id;
+    private String nombre;
+    private String peso;
+    private String altura;
+    private String sexo;
+    private String edad;
+   private String pesoDeseado;
+
+   private int Id;
     public Persona(){
 
     }
@@ -68,4 +69,8 @@ public class Persona {
     public String getPesoDeseado() {
         return pesoDeseado;
     }
+
+
+
+
 }

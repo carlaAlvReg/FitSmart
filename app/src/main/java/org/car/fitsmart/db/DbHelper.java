@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 9;
     private static final String DATABASE_NOMBRE = "ejercicios.db";
     public static final String TABLE_EJERCICIOS = "t_ejercicios";
     public static final String TABLE_PERSONA = "t_persona";
@@ -52,7 +52,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_EJERCICIOS);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PERSONA);
+        //sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PERSONA);
         /*sqLiteDatabase.execSQL("DROP TABLE " + TABLE_RUTINA);*/
         onCreate(sqLiteDatabase);
     }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".NuevoActivity">
 
@@ -15,13 +15,50 @@
         android:hint="@string/hint_nombre"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/txtNivelDificultad"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/s_nivelDificultad"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnNivelDificultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/arrow_down_24"
+                app:fabCustomSize="30dp"
+                app:fabSize="auto" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textNivelDificultad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint_nivelDificultad"
-        android:inputType="text" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/txtGrupoMuscular"

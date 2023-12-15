@@ -57,34 +57,32 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="PesoActual"
+                            android:text="@string/hint_Peso"
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/etPesoActual"
+                            android:id="@+id/etPeso"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="number"
-                            android:text="PesoActual" />
+                            android:inputType="number" />
 
                         <TextView
                             android:id="@+id/textView6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Objetivo Peso"
+                            android:text="@string/hint_pesoDeseado"
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/etObjetivoPeso"
+                            android:id="@+id/etPesoDeseado"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="number"
-                            android:text="Objetivo Peso" />
+                            android:inputType="number" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -98,7 +96,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Edad"
+                            android:text="@string/hint_edad"
                             android:textSize="15sp" />
 
                         <EditText
@@ -107,15 +105,14 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="number"
-                            android:text="Edad" />
+                            android:inputType="number" />
 
                         <TextView
                             android:id="@+id/textView8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Altura"
+                            android:text="@string/hint_Altura"
                             android:textSize="15sp" />
 
                         <EditText
@@ -124,8 +121,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="number"
-                            android:text="Altura" />
+                            android:inputType="number" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -147,6 +143,13 @@
                 android:layout_weight="1"
                 android:text="Hoy"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
         </LinearLayout>
 
         <LinearLayout
