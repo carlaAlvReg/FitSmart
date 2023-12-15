@@ -23,7 +23,7 @@
         <activity
             android:name=".nuevaPersona"
             android:exported="false"
-            android:parentActivityName=".RutinaActivity"
+            android:parentActivityName=".PersonasActivity"
             android:theme="@style/Theme.FitSmart">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
