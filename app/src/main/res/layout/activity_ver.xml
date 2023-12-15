@@ -21,32 +21,92 @@
         android:labelFor="@+id/tviewNombre"
         android:inputType="text" />
 
-    <TextView
-        android:id="@+id/tviewNivelDificultad"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_nivelDificultad" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="249dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tviewNivelDificultad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_nivelDificultad" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabNivelDificultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/arrow_down_24"
+                app:fabCustomSize="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/txtNivelDificultad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:labelFor="@+id/tviewNivelDificultad"
-        android:inputType="text" />
+        android:inputType="text"
+        android:labelFor="@+id/tviewNivelDificultad" />
 
-    <TextView
-        android:id="@+id/tviewGrupoMuscular"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_grupoMuscular" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="249dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tviewGrupoMuscular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hint_grupoMuscular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabGrupoMuscular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/arrow_down_24"
+                app:fabCustomSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/txtGrupoMuscular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:labelFor="@+id/tviewGrupoMuscular"
+        android:labelFor="@+id/tviewNivelDificultad"
         android:inputType="text" />
 
     <TextView
@@ -77,11 +137,40 @@
         android:labelFor="@+id/tviewNumRepes"
         android:inputType="text" />
 
-    <TextView
-        android:id="@+id/tviewDia"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hint_dia" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="61dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tviewDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_dia" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/arrow_down_24"
+                app:fabCustomSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/txtDia"

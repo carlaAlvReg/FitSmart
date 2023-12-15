@@ -20,7 +20,7 @@ public class VerActivity extends AppCompatActivity {
 
     EditText txtNombre, txtNivelDificultad, txtGrupoMuscular, txtNumSeries, txtNumRepes, txtDia;
     Button btnGuarda;
-    FloatingActionButton fabEdit, fabDelete;
+    FloatingActionButton fabEdit, fabDelete, fabNivelDificultad, fabGrupoMuscular, fabDia;
 
     Ejercicio ejercicio;
     int id = 0;
@@ -39,6 +39,9 @@ public class VerActivity extends AppCompatActivity {
         btnGuarda = findViewById(R.id.btnGuarda);
         fabEdit = findViewById(R.id.fabEdit);
         fabDelete = findViewById(R.id.fabDelete);
+        fabNivelDificultad = findViewById(R.id.fabNivelDificultad);
+        fabGrupoMuscular = findViewById(R.id.fabGrupoMuscular);
+        fabDia = findViewById(R.id.fabDia);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
@@ -62,6 +65,9 @@ public class VerActivity extends AppCompatActivity {
             txtNumRepes.setText(ejercicio.getNum_repes());
             txtDia.setText(ejercicio.getDia());
             btnGuarda.setVisibility(View.INVISIBLE);
+            fabNivelDificultad.setVisibility(View.INVISIBLE);
+            fabGrupoMuscular.setVisibility(View.INVISIBLE);
+            fabDia.setVisibility(View.INVISIBLE);
             txtNombre.setInputType(InputType.TYPE_NULL);
             txtNivelDificultad.setInputType(InputType.TYPE_NULL);
             txtGrupoMuscular.setInputType(InputType.TYPE_NULL);
