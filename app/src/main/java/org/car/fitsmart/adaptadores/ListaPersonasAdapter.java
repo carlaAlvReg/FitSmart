@@ -65,9 +65,14 @@ public class ListaPersonasAdapter extends RecyclerView.Adapter<ListaPersonasAdap
                 @Override
                 public void onClick(View view) {
                     Context context = view.getContext();
-                    Intent intent = new Intent(context, ver_persona_activity.class);
-                    intent.putExtra("ID", listaPersona.get(getAdapterPosition()).getId());
-                    context.startActivity(intent);
+                    //Intent para ver la persona
+                    Intent intentVerPersona = new Intent(context, ver_persona_activity.class);
+                    intentVerPersona.putExtra("ID", listaPersona.get(getAdapterPosition()).getId());
+                    context.startActivity(intentVerPersona);
+                    //Intent para los datos en la pagina principal
+                    /*Intent intentDatos = new Intent(context, ver_persona_activity.class);
+                    intentDatos.putExtra("ID", listaPersona.get(getAdapterPosition()).getId());
+                    context.startActivity(intentDatos);*/
                 }
             });
 
