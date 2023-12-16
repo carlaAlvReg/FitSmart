@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnCrear = findViewById(R.id.btnCrear);
+        /*btnCrear = findViewById(R.id.btnCrear);
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "ERROR AL CREAR LA BASE DE DATOS", Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        });*/
 
 
     }
