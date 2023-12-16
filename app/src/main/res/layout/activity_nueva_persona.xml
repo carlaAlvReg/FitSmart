@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hint_Altura"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/txtPeso"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hint_Peso"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hint_pesoDeseado"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/txtEdad"
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hint_edad"
-        android:inputType="text" />
+        android:inputType="number" />
     <Button
         android:id="@+id/btnGuardaPersona"
         android:layout_width="match_parent"
