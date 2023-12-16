@@ -3,13 +3,16 @@ package org.car.fitsmart;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -22,6 +25,8 @@ public class ver_persona_activity extends AppCompatActivity {
 
     EditText txtNombre, txtPeso, txtAltura, txtPesoDeseado, txtSexo, txtEdad;
     Button btnGuarda;
+
+    Switch switchPersona;
 
     FloatingActionButton fabEdit, fabDelete;
     Persona persona;
@@ -42,6 +47,8 @@ public class ver_persona_activity extends AppCompatActivity {
 
         fabEdit = findViewById(R.id.fabEdit);
         fabDelete = findViewById(R.id.fabDelete);
+
+        switchPersona = findViewById(R.id.switchPersona);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
@@ -103,9 +110,25 @@ public class ver_persona_activity extends AppCompatActivity {
             }
         });
 
+        switchPersona.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // Si el Switch está activado, realiza la acción automáticamente
+                    transferirDatosAMainActivity();
+                }
+            }
+        });
+
     }
     private void lista(){
         Intent intent = new Intent(this, PersonasActivity.class);
+        startActivity(intent);
+    }
+
+    private void transferirDatosAMainActivity() {
+        Intent intent = new Intent(ver_persona_activity.this, MainActivity.class);
+        intent.putExtra("ID", id);
         startActivity(intent);
     }
 }

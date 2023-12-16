@@ -75,25 +75,18 @@ public class NuevoActivity extends AppCompatActivity {
         btnGuarda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*// Obtener la opción seleccionada del RadioGroup
-                int radioButtonId = radioGroupNivelDificultad.getCheckedRadioButtonId();
-                String nivelDificultad = "";
-
-                if (radioButtonId != -1) {
-                    RadioButton radioButton = findViewById(radioButtonId);
-                    // Verificar que el objeto RadioButton no sea null antes de obtener el texto
-                    if (radioButton != null) {
-                        nivelDificultad = radioButton.getText().toString();
-                    }
-                }*/
                 DbEjercicios dbEjercicios = new DbEjercicios(NuevoActivity.this);
-                long id = dbEjercicios.insertaEjercicio(txtNombre.getText().toString(), opcionNivelDificultad, opcionGrupoMuscular, txtNumSeries.getText().toString(),txtNumRepes.getText().toString(), opcionDia);
-                System.out.println("El id es"+id);
-                if(id > 0){
-                    Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
-                    limpiar();
+                if(!txtNombre.getText().toString().equals("") && !opcionNivelDificultad.equals("") && !opcionGrupoMuscular.equals("") && !txtNumSeries.getText().toString().equals("") && !txtNumRepes.getText().toString().equals("") && !opcionDia.equals("")) {
+                    long id = dbEjercicios.insertaEjercicio(txtNombre.getText().toString(), opcionNivelDificultad, opcionGrupoMuscular, txtNumSeries.getText().toString(), txtNumRepes.getText().toString(), opcionDia);
+                    System.out.println("El id es" + id);
+                    if (id > 0) {
+                        Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        limpiar();
+                    } else {
+                        Toast.makeText(NuevoActivity.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                    }
                 }else{
-                    Toast.makeText(NuevoActivity.this,"ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                    Toast.makeText(NuevoActivity.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS ", Toast.LENGTH_LONG).show();
                 }
             }
         });
