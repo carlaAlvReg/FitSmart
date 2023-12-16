@@ -53,13 +53,16 @@ public class nuevaPersona extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DbPersona dbPersona = new DbPersona(nuevaPersona.this);
-                long id = dbPersona.insertarPersona(txtNombre.getText().toString(), txtAltura.getText().toString(), txtPeso.getText().toString(), opcionSexo,txtPesoDeseado.getText().toString(), txtEdad.getText().toString());
-                System.out.println("El id es"+id);
-                if(id > 0){
-                    Toast.makeText(nuevaPersona.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
-                    limpiar();
-                }else{
-                    Toast.makeText(nuevaPersona.this,"ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                if(!txtNombre.getText().toString().equals("") && !txtAltura.getText().toString().equals("") && !txtPeso.getText().toString().equals("") && !opcionSexo.equals("") && !txtPesoDeseado.getText().toString().equals("") && !txtEdad.getText().toString().equals("")) {
+
+                    long id = dbPersona.insertarPersona(txtNombre.getText().toString(), txtAltura.getText().toString(), txtPeso.getText().toString(), opcionSexo, txtPesoDeseado.getText().toString(), txtEdad.getText().toString());
+                    System.out.println("El id es" + id);
+                    if (id > 0) {
+                        Toast.makeText(nuevaPersona.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        limpiar();
+                    } else {
+                        Toast.makeText(nuevaPersona.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
