@@ -1,6 +1,8 @@
 package org.car.fitsmart;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,15 +16,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.car.fitsmart.adaptadores.ListaEjerciciosAdapter;
 import org.car.fitsmart.db.DbEjercicios;
 import org.car.fitsmart.db.DbHelper;
 import org.car.fitsmart.db.DbPersona;
+import org.car.fitsmart.db.Ejercicio;
 import org.car.fitsmart.db.Persona;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     Button btnCrear;
     EditText etPeso, etEdad, etPesoDeseado, etAltura;
-
+    RecyclerView lvHoy;
+    ArrayList<Ejercicio> listaArrayEjercicios;
+    DbEjercicios dbEjercicios;
     Persona persona;
     int id = 0;
 
@@ -31,11 +41,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        lvHoy = findViewById(R.id.lvHoy);
         btnCrear = findViewById(R.id.btnCrear);
         etPeso = findViewById(R.id.etPeso);
         etEdad = findViewById(R.id.etEdad);
         etPesoDeseado = findViewById(R.id.etPesoDeseado);
         etAltura = findViewById(R.id.etAltura);
+
+        // Obtener la fecha actual
+        Date fechaActual = new Date();
+
+        // Crear un objeto Calendar y establecer la fecha actual
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(fechaActual);
+
+        // Obtener el día de la semana como un número (1 = Domingo, 2 = Lunes, ..., 7 = Sábado)
+        int numeroDiaSemana = calendar.get(Calendar.DAY_OF_WEEK);
+
+        // Obtener el día de la semana como texto (por ejemplo, "Lunes")
+        String nombreDiaSemana = obtenerNombreDiaSemana(numeroDiaSemana);
+        dbEjercicios = new DbEjercicios(MainActivity.this);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
@@ -66,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
             etPesoDeseado.setInputType(InputType.TYPE_NULL);
             etAltura.setInputType(InputType.TYPE_NULL);
         }
+        // Configura el RecyclerView inicialmente con el día seleccionado por defecto
+        lvHoy.setLayoutManager(new LinearLayoutManager(this));
+        String selectedDay = nombreDiaSemana;
+        cargarEjerciciosPorDia(nombreDiaSemana);
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+    private void cargarEjerciciosPorDia(String diaSeleccionado) {
+        listaArrayEjercicios = dbEjercicios.mostrarEjerciciosPorDia(diaSeleccionado);
+        ListaEjerciciosAdapter adapter = new ListaEjerciciosAdapter(listaArrayEjercicios);
+        lvHoy.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -128,6 +163,15 @@ public class MainActivity extends AppCompatActivity {
         etEdad.setText(sharedPreferences.getString("edad", ""));
         etPesoDeseado.setText(sharedPreferences.getString("pesoDeseado", ""));
         etAltura.setText(sharedPreferences.getString("altura", ""));
+    }
+    private String obtenerNombreDiaSemana(int numeroDiaSemana) {
+        String[] nombresDias = {"Domingo","Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
+        // Asegurarse de que el número del día de la semana esté en el rango correcto
+        if (numeroDiaSemana >= 1 && numeroDiaSemana <= 7) {
+            return nombresDias[numeroDiaSemana - 1];
+        } else {
+            return "Día no válido";
+        }
     }
 
     private void goNP(){

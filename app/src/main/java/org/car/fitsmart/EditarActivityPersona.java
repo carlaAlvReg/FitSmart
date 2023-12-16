@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class EditarActivityPersona extends AppCompatActivity {
     EditText txtNombre, txtPeso, txtAltura, txtPesoDeseado, txtSexo, txtEdad;
     Button btnGuarda;
     boolean correcto = false;
+    Switch switchPersona;
 
     FloatingActionButton fabEdit, fabDelete;
 
@@ -42,6 +44,8 @@ public class EditarActivityPersona extends AppCompatActivity {
         fabEdit.setVisibility(View.INVISIBLE);
         fabDelete = findViewById(R.id.fabDelete);
         fabDelete.setVisibility(View.INVISIBLE);
+        switchPersona = findViewById(R.id.switchPersona);
+        switchPersona.setVisibility(View.INVISIBLE);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
