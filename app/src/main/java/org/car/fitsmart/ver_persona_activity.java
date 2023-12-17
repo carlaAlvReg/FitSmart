@@ -28,7 +28,7 @@ public class ver_persona_activity extends AppCompatActivity {
 
     Switch switchPersona;
 
-    FloatingActionButton fabEdit, fabDelete;
+    FloatingActionButton fabEdit, fabDelete, fabSexo;
     Persona persona;
     int id = 0;
 
@@ -42,6 +42,7 @@ public class ver_persona_activity extends AppCompatActivity {
         txtPeso = findViewById(R.id.txtPeso);
         txtSexo = findViewById(R.id.txtSexo);
         txtPesoDeseado = findViewById(R.id.txtPesoDeseado);
+        fabSexo = findViewById(R.id.btnSexo);
         txtEdad = findViewById(R.id.txtEdad);
         btnGuarda = findViewById(R.id.btnGuarda);
 
@@ -72,6 +73,7 @@ public class ver_persona_activity extends AppCompatActivity {
             txtPesoDeseado.setText(persona.getPesoDeseado());
             txtEdad.setText(persona.getEdad());
             btnGuarda.setVisibility(View.INVISIBLE);
+            fabSexo.setVisibility(View.INVISIBLE);
             txtNombre.setInputType(InputType.TYPE_NULL);
             txtAltura.setInputType(InputType.TYPE_NULL);
             txtPeso.setInputType(InputType.TYPE_NULL);
