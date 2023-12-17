@@ -26,6 +26,7 @@
     <string name="btn_guardar_persona">Guardar</string>
     <string name="s_sexo">Seleccione Sexo</string>
     <string name="newUsuario">Usuarios</string>
+    <string name="start">Empezar-></string>
     <string-array name="days_array">
         <item>Lunes</item>
         <item>Martes</item>
