@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lvHoy = findViewById(R.id.lvHoy);
-        btnCrear = findViewById(R.id.btnCrear);
+        //btnCrear = findViewById(R.id.btnCrear);
         etPeso = findViewById(R.id.etPeso);
         etEdad = findViewById(R.id.etEdad);
         etPesoDeseado = findViewById(R.id.etPesoDeseado);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         lvHoy.setLayoutManager(new LinearLayoutManager(this));
         String selectedDay = nombreDiaSemana;
         cargarEjerciciosPorDia(nombreDiaSemana);
-        btnCrear.setOnClickListener(new View.OnClickListener() {
+        /*btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DbHelper dbHelper = new DbHelper(MainActivity.this);
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "ERROR AL CREAR LA BASE DE DATOS", Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        });*/
 
 
     }
