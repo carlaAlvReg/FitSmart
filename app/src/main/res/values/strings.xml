@@ -23,7 +23,7 @@
     <string name="hint_Sexo">Sexo:</string>
     <string name="hint_pesoDeseado">Peso Deseado:</string>
     <string name="hint_edad">Edad:</string>
-    <string name="btn_guardar_persona">Guardar</string>
+    <string name="btn_guardar_persona">Guardar:</string>
     <string name="s_sexo">Seleccione Sexo</string>
     <string name="newUsuario">Usuarios</string>
     <string-array name="days_array">
